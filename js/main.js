@@ -45,7 +45,7 @@ const carousel = document.querySelector('.carousel');
         else {
 
         active[itemNumber].classList.remove('show');
-        itemNumber - 1;
+        itemNumber--;
         active[itemNumber].classList.add('show');
         console.log(itemNumber);
 
