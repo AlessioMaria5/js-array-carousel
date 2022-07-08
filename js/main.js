@@ -33,7 +33,7 @@ const carousel = document.querySelector('.carousel');
     up.addEventListener ( 'click', 
     function() {
 
-        if(itemNumber <= 2) {
+        if(itemNumber <= 3) {
 
         active[itemNumber].classList.remove('show');
         itemNumber++
@@ -59,9 +59,20 @@ const carousel = document.querySelector('.carousel');
     down.addEventListener ( 'click', 
     function() {
 
+        if(itemNumber > 0) {
+
         active[itemNumber].classList.remove('show');
         itemNumber--
         active[itemNumber].classList.add('show');
+
+        }
+
+        else {
+
+            active[itemNumber].classList.remove('show');
+            itemNumber = 4
+            active[itemNumber].classList.add('show');
+        }
     }
     );
 
