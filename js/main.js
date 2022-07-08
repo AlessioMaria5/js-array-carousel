@@ -28,6 +28,30 @@ const carousel = document.querySelector('.carousel');
 
     // CREO L'EVENTO NEXT 
 
+    const up = document.querySelector('.up');
+
+    up.addEventListener ( 'click', 
+    function() {
+
+        active[itemNumber].classList.remove('show');
+        itemNumber++
+        active[itemNumber].classList.add('show');
+    }
+
+    );
+
+    const down = document.querySelector('.down')
+
+    down.addEventListener ( 'click', 
+    function() {
+
+        active[itemNumber].classList.remove('show');
+        itemNumber--
+        active[itemNumber].classList.add('show');
+    }
     
+    );
+
+
 
 
