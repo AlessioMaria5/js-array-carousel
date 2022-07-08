@@ -33,11 +33,25 @@ const carousel = document.querySelector('.carousel');
     up.addEventListener ( 'click', 
     function() {
 
+        if(itemNumber <= 2) {
+
         active[itemNumber].classList.remove('show');
         itemNumber++
         active[itemNumber].classList.add('show');
-    }
+        console.log(itemNumber);
 
+        }
+
+        else {
+
+        active[itemNumber].classList.remove('show');
+        itemNumber - 1;
+        active[itemNumber].classList.add('show');
+        console.log(itemNumber);
+
+        }
+
+    }
     );
 
     const down = document.querySelector('.down')
@@ -49,9 +63,13 @@ const carousel = document.querySelector('.carousel');
         itemNumber--
         active[itemNumber].classList.add('show');
     }
-    
     );
 
+    // if (active[itemNumber]== 5){
+            
+    //     active[itemNumber].classList.remove('show');
+    //     itemNumber - 5
+    //     active[itemNumber].classList.add('show');
 
-
-
+    //     console.log(itemNumber);
+    // }
