@@ -21,6 +21,8 @@ const thumb = document.querySelector('.thumb');
 
     }
 
+
+
     //AGGIUNGO LA CLASSE SHOW AL PRIMO(0, coefficiente che ACTIVE recupera da ItemNumber) ELEMENTO
     let itemNumber = 0;
     const active = document.getElementsByClassName('item');
@@ -36,19 +38,22 @@ const thumb = document.querySelector('.thumb');
 
         if(itemNumber <= 3) {
 
+            thumbmailIn[itemNumber].classList.remove('selected')
             active[itemNumber].classList.remove('show');
             itemNumber++
             active[itemNumber].classList.add('show');
-            console.log(itemNumber);
+            thumbmailIn[itemNumber].classList.add('selected')
 
         }
 
         else {
 
+            thumbmailIn[itemNumber].classList.remove('selected')
             active[itemNumber].classList.remove('show');
             itemNumber = 0;
             active[itemNumber].classList.add('show');
             console.log(itemNumber);
+            thumbmailIn[itemNumber].classList.add('selected')
 
         }
 
@@ -62,17 +67,21 @@ const thumb = document.querySelector('.thumb');
 
         if(itemNumber > 0) {
 
+            thumbmailIn[itemNumber].classList.remove('selected')
             active[itemNumber].classList.remove('show');
             itemNumber--
             active[itemNumber].classList.add('show');
+            thumbmailIn[itemNumber].classList.add('selected')
+            
 
         }
 
         else {
-
+            thumbmailIn[itemNumber].classList.remove('selected')
             active[itemNumber].classList.remove('show');
             itemNumber = 4
             active[itemNumber].classList.add('show');
+            thumbmailIn[itemNumber].classList.add('selected')
         }
     }
     );
@@ -94,9 +103,12 @@ const thumb = document.querySelector('.thumb');
 
     thumbmailIn[0].addEventListener('click', 
     function(){
-                active[itemNumber].classList.remove('show');
-                itemNumber = 0
-                active[0].classList.add('show')
+
+        thumbmailIn[itemNumber].classList.remove('selected')
+        thumbmailIn[0].classList.add('selected')
+        active[itemNumber].classList.remove('show');
+        itemNumber = 0
+        active[0].classList.add('show')
                 
     }         
     );
@@ -104,6 +116,8 @@ const thumb = document.querySelector('.thumb');
     thumbmailIn[1].addEventListener('click', 
     function(){
 
+        thumbmailIn[itemNumber].classList.remove('selected')
+        thumbmailIn[1].classList.add('selected')
         active[itemNumber].classList.remove('show');
         itemNumber = 1
         active[1].classList.add('show')
@@ -114,6 +128,8 @@ const thumb = document.querySelector('.thumb');
     thumbmailIn[2].addEventListener('click', 
     function(){
 
+        thumbmailIn[itemNumber].classList.remove('selected')
+        thumbmailIn[2].classList.add('selected')
         active[itemNumber].classList.remove('show');
         itemNumber = 2
         active[2].classList.add('show')
@@ -123,26 +139,21 @@ const thumb = document.querySelector('.thumb');
     thumbmailIn[3].addEventListener('click', 
     function(){
 
+        thumbmailIn[itemNumber].classList.remove('selected')
+        thumbmailIn[3].classList.add('selected')
         active[itemNumber].classList.remove('show');
         itemNumber = 3
         active[3].classList.add('show')
-       
     }         
     );
 
     thumbmailIn[4].addEventListener('click', 
     function(){
 
+        thumbmailIn[itemNumber].classList.remove('selected')
+        thumbmailIn[4].classList.add('selected')
         active[itemNumber].classList.remove('show');
         itemNumber = 4
         active[4].classList.add('show')
-        
     }         
     );
-
-
-
-
-
-
-
